@@ -6,22 +6,22 @@ describe('Player', function(){
   var grid;
 	beforeEach(function(){
 		player = new Player();
-    grid = [["", "", ""], ["", "", ""], ["", "", ""]];
+    grid = new Grid();
 	});
 
   it("Should have an empty grid to start with", function() {
-    expect(grid).toEqual([["","",""],["","",""],["","",""]]);
+    expect(player._grid.current).toEqual([["","",""],["","",""],["","",""]]);
   });
 
   it("player can add an X", function() {
-    player.playerX(grid, 1, 1);
-    expect(grid).toEqual([["","",""],["","X",""],["","",""]])
+    player.playerX(1, 1);
+    expect(player._grid.current).toEqual([["","",""],["","X",""],["","",""]])
   });
 
   it("player can add an O", function() {
-    player.playerX(grid, 1, 1);
-    player.playerO(grid, 1, 0);
-    expect(grid).toEqual([["","",""],["O","X",""],["","",""]])
+    player.playerX(1, 1);
+    player.playerO(1, 0);
+    expect(player._grid.current).toEqual([["","",""],["O","X",""],["","",""]])
   });
 
 });

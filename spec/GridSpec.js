@@ -11,6 +11,4 @@ describe('Grid', function(){
 		  expect(grid.current).toEqual([["","",""],["","",""],["","",""]]);
 		});
 
-	
-
 });
