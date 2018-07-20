@@ -11,4 +11,9 @@ describe('Grid', function(){
 		  expect(grid.current).toEqual([["","",""],["","",""],["","",""]]);
 		});
 
+		it("Should be able to clear the grid", function() {
+			grid.clear();
+		  expect(grid.current).toEqual([["","",""],["","",""],["","",""]]);
+		});
+
 });
