@@ -1,13 +1,10 @@
 function Player(){
-  this.moves = []
 }
 
-
-
-Player.prototype.playerX = function (row, column) {
-  this.moves.push([row, column]);
+Player.prototype.playerX = function (grid, row, column) {
+  grid[row][column] = "X"
 };
 
-Player.prototype.playerO = function (row, column) {
-  this.moves.push([row, column]);
+Player.prototype.playerO = function (grid, row, column) {
+  grid[row][column] = "O"
 };
