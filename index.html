@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Noughts and Crossest</title>
+     <link rel="stylesheet" href="./stylesheets/stylesheet.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+
+
+  <body>
+    <div class = 'text-center'>
+      <section>
+  		<h1> Player X: <span id="player1"></span></h1>
+			<form id="playerX">
+    		<input id="playerX" type="text" placeholder="Enter your name"></input>
+    		<input type="submit"></input>
+  		</form>
+		  </section>
+      <section>
+  		<h1> Player O: <span id="playerO"></span></h1>
+			<form id="playerO">
+    		<input id="playerO" type="text" placeholder="Enter your name"></input>
+    		<input type="submit"></input>
+  		</form>
+    </section><br>
+      <section>
+        <table align="center">
+          <tr>
+            <td><button id="0-0" class="button buttonBlack"><span id="00"></span></button></td>
+            <td><button id="0-1" class="button buttonBlack"></button></td>
+            <td><button id="0-2" class="button buttonBlack"></button></td>
+          </tr>
+          <tr>
+            <td><button id="1-0" class="button buttonBlack"></button></td>
+            <td><button id="1-1" class="button buttonBlack"></button></td>
+            <td><button id="1-2" class="button buttonBlack"></button></td>
+          </tr>
+          <tr>
+            <td><button id="2-0" class="button buttonBlack"></button></td>
+            <td><button id="2-1" class="button buttonBlack"></button></td>
+            <td><button id="2-2" class="button buttonBlack"></button></td>
+          </tr>
+        </table>
+      </section>
+
+
+
+      <script src="./jQuery.js"></script>
+  		<script src="./src/Player.js"></script>
+  		<script src="./src/interface.js"></script>
+    </div>
+  </body>
+
+</html>
