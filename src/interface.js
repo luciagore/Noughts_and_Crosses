@@ -2,10 +2,16 @@ $(document).ready(function() {
 
   var player = new Player();
 
-  $('#submitXname').submit(function(event) {
+  $('#playerXsubmit').submit(function(event) {
     event.preventDefault();
     var name = $('#playerX').val();
     $('#player1').text(name);
+  })
+
+  $('#playerOsubmit').submit(function(event) {
+    event.preventDefault();
+    var name1 = $('#playerO').val();
+    $('#player2').text(name1);
   })
 
   function updateGrid() {
