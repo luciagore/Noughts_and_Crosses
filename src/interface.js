@@ -16,18 +16,47 @@ $(document).ready(function() {
 
   $('#0-0').click(function() {
     player.playerX(0,0);
-    updateGrid();
     eachTurn();
   });
 
   $('#0-1').click(function() {
     player.playerX(0,1);
-    updateGrid();
+    eachTurn();
   });
 
   $('#0-2').click(function() {
     player.playerX(0,2);
-    updateGrid();
+    eachTurn();
+  });
+
+  $('#1-0').click(function() {
+    player.playerX(1,0);
+    eachTurn();
+  });
+
+  $('#1-1').click(function() {
+    player.playerX(1,1);
+    eachTurn();
+  });
+
+  $('#1-2').click(function() {
+    player.playerX(1,2);
+    eachTurn();
+  });
+
+  $('#2-0').click(function() {
+    player.playerX(2,0);
+    eachTurn();
+  });
+
+  $('#2-1').click(function() {
+    player.playerX(2,1);
+    eachTurn();
+  });
+
+  $('#2-2').click(function() {
+    player.playerX(2,2);
+    eachTurn();
   });
 
 
@@ -44,6 +73,7 @@ $(document).ready(function() {
   }
 
   function eachTurn() {
+    updateGrid();
     player._grid.checkWin();
     if(player._grid.winStatus === true) {
       player._grid.clear();
