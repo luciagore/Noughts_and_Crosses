@@ -21,7 +21,7 @@ function Player(){
 // };
 
 
-Player.prototype.play = function (row, column) {
+Player.prototype.playTurn = function (row, column) {
   var row = row;
   var column = column;
   var players = this;
