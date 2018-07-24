@@ -8,30 +8,39 @@ Grid.prototype.clear = function () {
 	console.log("Grid RESET!");
 };
 
-Grid.prototype.XWin = function() {
-	var rows = [[["X","X","X"],["","",""],["","",""]],
-	[["","",""],["X","X","X"],["","",""]],
-	[["","",""],["","",""],["X","X","X"]]]
+Grid.prototype.checkWin = function () {
+  if( areEqual(this.current[0][0], this.current[0][1], this.current[0][2]) ) {
+  console.log(this.current[0][0] + " has won");
+  this.winStatus = true;
+} else if (areEqual(this.current[1][0], this.current[1][1], this.current[1][2])) {
+  console.log(this.current[1][0] + " has won");
+  this.winStatus = true;
+} else if (areEqual(this.current[2][0], this.current[2][1], this.current[2][2])) {
+  console.log(this.current[2][0] + " has won");
+  this.winStatus = true;
+} else if (areEqual(this.current[0][0], this.current[1][0], this.current[2][0])) {
+  console.log(this.current[0][0] + " has won");
+  this.winStatus = true;
+} else if (areEqual(this.current[0][1], this.current[1][1], this.current[2][1])) {
+  console.log(this.current[0][1] + " has won");
+  this.winStatus = true;
+} else if (areEqual(this.current[0][2], this.current[1][2], this.current[2][2])) {
+  console.log(this.current[0][2] + " has won");
+  this.winStatus = true;
+} else if (areEqual(this.current[0][0], this.current[1][1], this.current[2][2])) {
+  console.log(this.current[0][0] + " has won");
+  this.winStatus = true;
+} else if (areEqual(this.current[0][2], this.current[1][1], this.current[2][0])) {
+  console.log(this.current[0][2] + " has won");
+  this.winStatus = true;
+}
 
-	var columns = [[["X","",""],["X","",""],["X","",""]],
-	[["","X",""],["","X",""],["","X",""]],
-	[["","","X"],["","","X"],["","","X"]]]
-
-	var diagonals = [[["X","",""],["","X",""],["","","X"]],
-	[["","","X"],["","X",""],["X","",""]]]
-
-
-	for(var testArr = 0; testArr <= 2; testArr++){
-		if(String(this.current) === String(rows[testArr])) {
-			this.winStatus = true;
-		}
-		if(String(this.current) === String(columns[testArr])) {
-			this.winStatus = true;
-		}
-	}
-	for(var testArr = 0; testArr <= 1; testArr++){
-		if(String(this.current) === String(diagonals[testArr])) {
-			this.winStatus = true;
-		}
-	}
+  function areEqual(){
+     var len = arguments.length;
+     for (var i = 1; i< len; i++){
+        if (arguments[i] === "" || arguments[i] !== arguments[i-1])
+           return false;
+     }
+     return true;
+  }
 };

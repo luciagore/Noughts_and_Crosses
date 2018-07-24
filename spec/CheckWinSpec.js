@@ -12,7 +12,7 @@ describe("Player", function() {
       player.playerX(0,0);
       player.playerX(0,1);
       player.playerX(0,2);
-      player._grid.XWin();
+      player._grid.checkWin();
       expect(player._grid.winStatus).toEqual(true);
     });
 
@@ -20,7 +20,7 @@ describe("Player", function() {
       player.playerX(1,0);
       player.playerX(1,1);
       player.playerX(1,2);
-      player._grid.XWin();
+      player._grid.checkWin();
       expect(player._grid.winStatus).toEqual(true);
     });
 
@@ -28,7 +28,7 @@ describe("Player", function() {
       player.playerX(2,0);
       player.playerX(2,1);
       player.playerX(2,2);
-      player._grid.XWin();
+      player._grid.checkWin();
       expect(player._grid.winStatus).toEqual(true);
     });
 
@@ -36,7 +36,7 @@ describe("Player", function() {
       player.playerX(0,0);
       player.playerX(1,0);
       player.playerX(2,0);
-      player._grid.XWin();
+      player._grid.checkWin();
       expect(player._grid.winStatus).toEqual(true);
     });
 
@@ -44,7 +44,7 @@ describe("Player", function() {
       player.playerX(0,1);
       player.playerX(1,1);
       player.playerX(2,1);
-      player._grid.XWin();
+      player._grid.checkWin();
       expect(player._grid.winStatus).toEqual(true);
     });
 
@@ -52,7 +52,7 @@ describe("Player", function() {
       player.playerX(0,2);
       player.playerX(1,2);
       player.playerX(2,2);
-      player._grid.XWin();
+      player._grid.checkWin();
       expect(player._grid.winStatus).toEqual(true);
     });
 
@@ -60,7 +60,7 @@ describe("Player", function() {
       player.playerX(0,0);
       player.playerX(1,1);
       player.playerX(2,2);
-      player._grid.XWin();
+      player._grid.checkWin();
       expect(player._grid.winStatus).toEqual(true);
     });
 
@@ -68,7 +68,7 @@ describe("Player", function() {
       player.playerX(0,2);
       player.playerX(1,1);
       player.playerX(2,0);
-      player._grid.XWin();
+      player._grid.checkWin();
       expect(player._grid.winStatus).toEqual(true);
     });
 

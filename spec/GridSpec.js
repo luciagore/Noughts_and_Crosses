@@ -16,4 +16,9 @@ describe('Grid', function(){
 		  expect(grid.current).toEqual([["","",""],["","",""],["","",""]]);
 		});
 
+		it("Should be able to check if spaces contain equal elements", function() {
+			grid.checkWin();
+			expect(grid.winStatus).toEqual(false);
+		})
+
 });
