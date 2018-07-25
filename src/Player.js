@@ -3,23 +3,6 @@ function Player(){
   this.xturn = true
 }
 
-//
-// Player.prototype.playerX = function (row, column) {
-//   if(this._grid.current[row][column] == "X" || this._grid.current[row][column] == "O"){
-//  	 console.log("Space already taken");
-//     } else{this._grid.current[row][column] = "X";
-//     this.xturn = false
-//   }
-// };
-//
-// Player.prototype.playerO = function (row, column) {
-//   if(this._grid.current[row][column] == "X" || this._grid.current[row][column] == "O"){
-//  	 console.log("Space already taken");
-//     } else{this._grid.current[row][column] = "O";
-//     this.xturn = true
-//   }
-// };
-
 
 Player.prototype.playTurn = function (row, column) {
   var row = row;
