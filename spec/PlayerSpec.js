@@ -8,22 +8,25 @@ describe('Player', function(){
 	});
 
   it("Should have an empty grid to start with", function() {
-    expect(player._grid.current).toEqual([["","",""],["","",""],["","",""]]);
+    spyOn(player.grid(), 'show').and.returnValue([["","",""],["","",""],["","",""]])
+    expect(player.grid().show()).toEqual([["","",""],["","",""],["","",""]]);
   });
 
   it("Should start on player x's turn", function() {
-    expect(player.xturn).toEqual(true);
+    expect(player.XTurn()).toEqual(true);
   });
 
   it("Should always play an X first", function() {
+    spyOn(player.grid(), 'show').and.returnValue([["","",""],["","X",""],["","",""]])
     player.playTurn(1, 1);
-    expect(player._grid.current).toEqual([["","",""],["","X",""],["","",""]])
+    expect(player.grid().show()).toEqual([["","",""],["","X",""],["","",""]])
   });
 
   it("Should always play an O after an X", function() {
+    spyOn(player.grid(), 'show').and.returnValue([["","",""],["O","X",""],["","",""]])
     player.playTurn(1, 1);
     player.playTurn(1, 0);
-    expect(player._grid.current).toEqual([["","",""],["O","X",""],["","",""]])
+    expect(player.grid().show()).toEqual([["","",""],["O","X",""],["","",""]])
   });
 
 });

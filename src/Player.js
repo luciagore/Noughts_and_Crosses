@@ -3,6 +3,14 @@ function Player(){
   this.xturn = true
 }
 
+Player.prototype.grid = function () {
+  return this._grid;
+};
+
+Player.prototype.XTurn = function () {
+  return this.xturn;
+};
+
 
 Player.prototype.playTurn = function (row, column) {
   var row = row;
@@ -19,17 +27,17 @@ Player.prototype.playTurn = function (row, column) {
 
 
   function playerX (row, column) {
-    if(players._grid.current[row][column] == "X" || players._grid.current[row][column] == "O"){
+    if(players.grid().current[row][column] == "X" || players._grid.current[row][column] == "O"){
    	 console.log("Space already taken");
-   } else{players._grid.current[row][column] = "X";
+   } else{players.grid().current[row][column] = "X";
     }
   }
 
 
   function playerO (row, column) {
-    if(players._grid.current[row][column] == "X" || players._grid.current[row][column] == "O"){
+    if(players.grid().current[row][column] == "X" || players._grid.current[row][column] == "O"){
      console.log("Space already taken");
-   } else{players._grid.current[row][column] = "O";
+   } else{players.grid().current[row][column] = "O";
     }
   }
 };

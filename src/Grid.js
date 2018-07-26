@@ -17,8 +17,12 @@ Grid.prototype.forceClear = function () {
   return "Grid Reset!"
 };
 
-Grid.prototype.current = function () {
+Grid.prototype.show = function () {
   return this.current;
+};
+
+Grid.prototype.gameWon = function () {
+  return this.winStatus;
 };
 
 
