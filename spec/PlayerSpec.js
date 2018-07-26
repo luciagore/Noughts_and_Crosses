@@ -3,10 +3,8 @@
 describe('Player', function(){
 
   var player;
-  var grid;
 	beforeEach(function(){
 		player = new Player();
-    grid = new Grid();
 	});
 
   it("Should have an empty grid to start with", function() {

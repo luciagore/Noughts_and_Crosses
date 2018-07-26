@@ -3,6 +3,13 @@ table, th, td {
 
 }
 
+div, html {
+    margin: 0;
+    height: 100%;
+    margin-top: 40px;
+    background-color: #637eff;
+}
+
 .button {
     border: none;
     padding: 15px 15px;

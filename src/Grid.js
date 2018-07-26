@@ -17,6 +17,10 @@ Grid.prototype.forceClear = function () {
   return "Grid Reset!"
 };
 
+Grid.prototype.current = function () {
+  return this.current;
+};
+
 
 Grid.prototype.checkWin = function () {
   if( areEqual(this.current[0][0], this.current[0][1], this.current[0][2]) ) {
