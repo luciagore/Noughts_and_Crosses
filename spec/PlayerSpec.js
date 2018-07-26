@@ -13,14 +13,18 @@ describe('Player', function(){
     expect(player._grid.current).toEqual([["","",""],["","",""],["","",""]]);
   });
 
-  it("player can add an X", function() {
-    player.playerX(1, 1);
+  it("Should start on player x's turn", function() {
+    expect(player.xturn).toEqual(true);
+  });
+
+  it("Should always play an X first", function() {
+    player.playTurn(1, 1);
     expect(player._grid.current).toEqual([["","",""],["","X",""],["","",""]])
   });
 
-  it("player can add an O", function() {
-    player.playerX(1, 1);
-    player.playerO(1, 0);
+  it("Should always play an O after an X", function() {
+    player.playTurn(1, 1);
+    player.playTurn(1, 0);
     expect(player._grid.current).toEqual([["","",""],["O","X",""],["","",""]])
   });
 

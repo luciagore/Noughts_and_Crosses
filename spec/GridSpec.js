@@ -11,7 +11,12 @@ describe('Grid', function(){
 		  expect(grid.current).toEqual([["","",""],["","",""],["","",""]]);
 		});
 
-		it("Should be able to clear the grid", function() {
+		it("Should have a win status of false to start", function() {
+			expect(grid.winStatus).toEqual(false)
+		});
+
+		it("Should be able to clear the grid if win status is true", function() {
+			grid.winStatus = true
 			grid.clear();
 		  expect(grid.current).toEqual([["","",""],["","",""],["","",""]]);
 		});
@@ -19,6 +24,12 @@ describe('Grid', function(){
 		it("Should be able to check if spaces contain equal elements", function() {
 			grid.checkWin();
 			expect(grid.winStatus).toEqual(false);
-		})
+		});
+
+		it("Should be able to force clear the board", function() {
+			grid.winStatus = false
+			grid.forceClear();
+		  expect(grid.current).toEqual([["","",""],["","",""],["","",""]]);
+		});
 
 });
