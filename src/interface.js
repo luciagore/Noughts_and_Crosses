@@ -64,6 +64,11 @@ $(document).ready(function() {
     player._grid.forceClear();
   });
 
+  $('#NewGame').click(function() {
+    window.location.href = 'index.html';
+    player._grid.forceClear();
+  });
+
 
   function updateGrid() {
     $('#00').text(player._grid.current[0][0]);
@@ -79,8 +84,11 @@ $(document).ready(function() {
 
   function eachTurn() {
     updateGrid();
-    $('#Winner').text(player._grid.checkWin());
     player._grid.checkWin();
-  }
+    if (player._grid.winStatus === true) {
+      let w = player._grid.checkWin()
+      window.location.href = 'winpage.html#'+w;
+    }
+   }
 
   })

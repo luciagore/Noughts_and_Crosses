@@ -18,7 +18,8 @@ Player.prototype.playTurn = function (row, column) {
   var players = this;
 
   if (this.xturn === true){
-    if(players.grid().current[row][column] == "X" || players.grid().current[row][column] == "O"){
+    if(players.grid().current[row][column] == "X"
+    || players.grid().current[row][column] == "O"){
    	 console.log("Space already taken");
      this.xturn = true
    } else {
@@ -26,7 +27,8 @@ Player.prototype.playTurn = function (row, column) {
      this.xturn = false
    };
  } else {
-   if(players.grid().current[row][column] == "X" || players._grid.current[row][column] == "O"){
+   if(players.grid().current[row][column] == "X"
+   || players._grid.current[row][column] == "O"){
     console.log("Space already taken");
     this.xturn = false
   } else {

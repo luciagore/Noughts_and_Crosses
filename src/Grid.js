@@ -29,28 +29,28 @@ Grid.prototype.gameWon = function () {
 Grid.prototype.checkWin = function () {
   if( areEqual(this.current[0][0], this.current[0][1], this.current[0][2]) ) {
   this.winStatus = true;
-  return this.current[0][0] + " has won";
+  return this.current[0][0];
 } else if (areEqual(this.current[1][0], this.current[1][1], this.current[1][2])) {
   this.winStatus = true;
-  return this.current[1][0] + " has won";
+  return this.current[1][0];
 } else if (areEqual(this.current[2][0], this.current[2][1], this.current[2][2])) {
   this.winStatus = true;
-  return this.current[2][0] + " has won";
+  return this.current[2][0];
 } else if (areEqual(this.current[0][0], this.current[1][0], this.current[2][0])) {
   this.winStatus = true;
-  return this.current[0][0] + " has won";
+  return this.current[0][0];
 } else if (areEqual(this.current[0][1], this.current[1][1], this.current[2][1])) {
   this.winStatus = true;
-  return this.current[0][1] + " has won";
+  return this.current[0][1];
 } else if (areEqual(this.current[0][2], this.current[1][2], this.current[2][2])) {
   this.winStatus = true;
-  return this.current[0][2] + " has won";
+  return this.current[0][2];
 } else if (areEqual(this.current[0][0], this.current[1][1], this.current[2][2])) {
   this.winStatus = true;
-  return this.current[0][0] + " has won";
+  return this.current[0][0];
 } else if (areEqual(this.current[0][2], this.current[1][1], this.current[2][0])) {
   this.winStatus = true;
-  return this.current[0][2] + " has won";
+  return this.current[0][2];
 }
 
   function areEqual(){
